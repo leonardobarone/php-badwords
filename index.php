@@ -1,3 +1,21 @@
+<?php 
+    // Creare una variabile con un paragrafo di testo a vostra scelta.
+    $testo = "Annie, are you okay?
+    So, Annie, are you okay? Are you okay, Annie?
+    Annie, are you okay?
+    So, Annie, are you okay? Are you okay, Annie?
+    Annie, are you okay?
+    So, Annie, are you okay? Are you okay, Annie?
+    Annie, are you okay?
+    So, Annie, are you okay? Are you okay, Annie?";
+    // Una parola da censurare viene passata dall'utente tramite parametro GET.
+    $parolaCensurata = $_GET["word"];
+    $parolaLowerCase = strtolower($parolaCensurata);
+    $testoLowerCase = strtolower($testo);
+    
+    // Sostituire con tre asterischi (***) tutte le occorrenze della parola da censurare.
+    $testoPulito = str_replace($parolaLowerCase, "***", $testoLowerCase);
+    ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,6 +25,9 @@
         <title>PHP Badwords</title>
     </head>
     <body>
-        
+        <!-- Stampare a schermo il paragrafo e la sua lunghezza. -->
+        <p><?php echo $testo ?></p>
+        <hr>
+        <p><?php echo $testoPulito;  ?></p>
     </body>
 </html>
