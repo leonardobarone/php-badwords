@@ -25,6 +25,11 @@
         <title>PHP Badwords</title>
     </head>
     <body>
+        <form action="" method="GET">
+            <label for="parola">Parola da Edulcorare</label>
+            <input type="text" id="parola" name="word">
+            <input type="submit">
+        </form>
         <!-- Stampare a schermo il paragrafo e la sua lunghezza. -->
         <p><?php echo $testo ?></p>
         <hr>
