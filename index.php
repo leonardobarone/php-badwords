@@ -15,6 +15,7 @@
     
     // Sostituire con tre asterischi (***) tutte le occorrenze della parola da censurare.
     $testoPulito = str_replace($parolaLowerCase, "***", $testoLowerCase);
+    $numeroTestoPulito = strlen($testoPulito);
     ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,5 +35,6 @@
         <p><?php echo $testo ?></p>
         <hr>
         <p><?php echo $testoPulito;  ?></p>
+        <h3><?php echo $numeroTestoPulito;?></h3>
     </body>
 </html>
